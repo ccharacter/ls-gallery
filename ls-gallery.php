@@ -4,7 +4,7 @@
  * Plugin Name:       LS Gallery Override
  * Plugin URI:        https://ccharacter.com/custom-plugins/sws-wp-tweaks/
  * Description:       Override the default WordPress gallery shortcode with a friendlier version
- * Version:           1.5
+ * Version:           1.6
  * Requires at least: 5.2
  * Requires PHP:      5.5
  * Author:            Laura Sage
@@ -18,9 +18,9 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 require_once plugin_dir_path(__FILE__).'inc/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://raw.githubusercontent.com/ccharacter/sws-wp-tweaks/master/plugin.json',
+	'https://raw.githubusercontent.com/ccharacter/ls-gallery/master/plugin.json',
 	__FILE__,
-	'sws_wp_tweaks'
+	'ls-gallery'
 );
 function laura_scripts() {
 	wp_enqueue_style( 'ls-elastislide', get_stylesheet_directory_uri() . '/css/elastislide.css' );
