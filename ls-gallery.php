@@ -4,7 +4,7 @@
  * Plugin Name:       LS Gallery Override
  * Plugin URI:        https://ccharacter.com/custom-plugins/sws-wp-tweaks/
  * Description:       Override the default WordPress gallery shortcode with a friendlier version
- * Version:           1.78
+ * Version:           1.79
  * Requires at least: 5.2
  * Requires PHP:      5.5
  * Author:            Laura Sage

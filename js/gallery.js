@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function() {
 	// ======================= imagesLoaded Plugin ===============================
 	// https://github.com/desandro/imagesloaded
 
