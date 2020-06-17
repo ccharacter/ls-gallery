@@ -4,7 +4,7 @@
  * Plugin Name:       LS Gallery Override
  * Plugin URI:        https://ccharacter.com/custom-plugins/sws-wp-tweaks/
  * Description:       Override the default WordPress gallery shortcode with a friendlier version
- * Version:           1.76
+ * Version:           1.78
  * Requires at least: 5.2
  * Requires PHP:      5.5
  * Author:            Laura Sage
@@ -24,12 +24,12 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 );
 function laura_scripts() {
 	wp_enqueue_style( 'ls-elastislide', plugin_dir_url(__FILE__). 'css/elastislide.css' );
-	wp_enqueue_style( 'ls-elastistyle',  plugin_dir_url(__FILE__). . 'css/elastistyle.css' );
+	wp_enqueue_style( 'ls-elastistyle',  plugin_dir_url(__FILE__) . 'css/elastistyle.css' );
 	
 	wp_enqueue_script( 'ls-jqueryeasing', '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js', '', '', true );
-	wp_enqueue_script( 'ls-jquerytmpl',  plugin_dir_url(__FILE__). .'js/jquery.tmpl.min.js', '', '', true );
-	wp_enqueue_script( 'ls-elastislide',  plugin_dir_url(__FILE__). .'js/jquery.elastislide.js', '', '', true );
-	wp_enqueue_script( 'ls-gallery',  plugin_dir_url(__FILE__). . 'js/gallery.js', '', '', true );
+	wp_enqueue_script( 'ls-jquerytmpl',  plugin_dir_url(__FILE__) .'js/jquery.tmpl.min.js', '', '', true );
+	wp_enqueue_script( 'ls-elastislide',  plugin_dir_url(__FILE__) .'js/jquery.elastislide.js', '', '', true );
+	wp_enqueue_script( 'ls-gallery',  plugin_dir_url(__FILE__).  'js/gallery.js', '', '', true );
 }
 add_action( 'wp_enqueue_scripts', 'laura_scripts' );
 
