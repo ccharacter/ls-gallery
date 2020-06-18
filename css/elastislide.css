@@ -22,7 +22,7 @@
 .es-carousel ul li{
 	height:100%;
 	float:left;
-	display:block;
+	display:flex;
 }
 
 .es-carousel ul li:before {

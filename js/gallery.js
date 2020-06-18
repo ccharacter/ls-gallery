@@ -1,8 +1,8 @@
-jQuery(function() {
+jQuery(function($) {
 	// ======================= imagesLoaded Plugin ===============================
 	// https://github.com/desandro/imagesloaded
 
-	// $('#my-container').imagesLoaded(myFunction)
+	// jQuery('#my-container').imagesLoaded(myFunction)
 	// execute a callback when all images have loaded.
 	// needed because .load() doesn't work on cached images
 
@@ -12,7 +12,7 @@ jQuery(function() {
 	// original: mit license. paul irish. 2010.
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
-	$.fn.imagesLoaded 		= function( callback ) {
+	jQuery.fn.imagesLoaded 		= function( callback ) {
 	var $images = this.find('img'),
 		len 	= $images.length,
 		_this 	= this,
@@ -48,7 +48,7 @@ jQuery(function() {
 	};
 
 	// gallery container
-	var $rgGallery			= $('#rg-gallery'),
+	var $rgGallery			= jQuery('#rg-gallery'),
 	// carousel container
 	$esCarousel			= $rgGallery.find('div.es-carousel-wrapper'),
 	// the carousel items
@@ -66,7 +66,7 @@ jQuery(function() {
 			init			= function() {
 				
 				// (not necessary) preloading the images here...
-				$items.add('<img src="images/ajax-loader.gif"/><img src="/ag3ieS/themes/alps-acs/images/black.png"/>').imagesLoaded( function() {
+				$items.add('<img src="ajax-loader.gif"/><img src="black.png"/>').imagesLoaded( function() {
 					// add options
 					_addViewModes();
 					
@@ -107,10 +107,10 @@ jQuery(function() {
 				
 				// top right buttons: hide / show carousel
 				
-				var $viewfull	= $('<a href="#" class="rg-view-full"></a>'),
-					$viewthumbs	= $('<a href="#" class="rg-view-thumbs rg-view-selected"></a>');
+				var $viewfull	= jQuery('<a href="#" class="rg-view-full"></a>'),
+					$viewthumbs	= jQuery('<a href="#" class="rg-view-thumbs rg-view-selected"></a>');
 				
-				$rgGallery.prepend( $('<div class="rg-view"/>').append( $viewfull ).append( $viewthumbs ) );
+				$rgGallery.prepend( jQuery('<div class="rg-view"/>').append( $viewfull ).append( $viewthumbs ) );
 				
 				$viewfull.on('click.rgGallery', function( event ) {
 						if( mode === 'carousel' )
@@ -139,7 +139,7 @@ jQuery(function() {
 				// adds the structure for the large image and the navigation buttons (if total items > 1)
 				// also initializes the navigation events
 				
-				$('#img-wrapper-tmpl').tmpl( {itemsCount : itemsCount} ).prependTo( $rgGallery );
+				jQuery('#img-wrapper-tmpl').tmpl( {itemsCount : itemsCount} ).prependTo( $rgGallery );
 				
 				if( itemsCount > 1 ) {
 					// addNavigation
@@ -169,7 +169,7 @@ jQuery(function() {
 						preventDefaultEvents: false
 					});
 				
-					$(document).on('keyup.rgGallery', function( event ) {
+					jQuery(document).on('keyup.rgGallery', function( event ) {
 						if (event.keyCode == 39)
 							_navigate( 'right' );
 						else if (event.keyCode == 37)
@@ -215,7 +215,7 @@ jQuery(function() {
 					title		= $thumb.data('description');
 					orientation	= $thumb.data('orientation');
 				
-				$('<img/>').load( function() {
+				jQuery('<img/>').load( function() {
 					
 					//$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
 					$rgGallery.find('div.rg-image').empty().css({'background-image':'url(' + largesrc + ')','background-size': '' + orientation + ''});
@@ -234,23 +234,23 @@ jQuery(function() {
 					
 				}).attr( 'src', largesrc );
 				
-				//var largesrc = $('div.rg-image');
+				//var largesrc = jQuery('div.rg-image');
 				//if (largesrc.width() > largesrc.height()){
 					//it's a landscape
-					//$('div.rg-image').addClass("landscape");
+					//jQuery('div.rg-image').addClass("landscape");
 				//} else if (largesrc.width() < largesrc.height()){
 					//it's a portrait
-					//$('div.rg-image').addClass("portrait");
+					//jQuery('div.rg-image').addClass("portrait");
 				//} else {
 					//image width and height are equal, therefore it is square.
-					//$('div.rg-image').addClass("landscape");
+					//jQuery('div.rg-image').addClass("landscape");
 				//}
 				
 			},
 			addItems		= function( $new ) {
 			
 				$esCarousel.find('ul').append($new);
-				$items 		= $items.add( $($new) );
+				$items 		= $items.add( jQuery($new) );
 				itemsCount	= $items.length; 
 				$esCarousel.elastislide( 'add', $new );
 			
@@ -268,7 +268,7 @@ jQuery(function() {
 	/*
 	Example to add more items to the gallery:
 	
-	var $new  = $('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
+	var $new  = jQuery('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
 	Gallery.addItems( $new );
 	*/
 });

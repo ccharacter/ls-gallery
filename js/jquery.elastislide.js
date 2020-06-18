@@ -186,7 +186,7 @@
 			
 			// total width of the slider / <ul>
 			// this will eventually change on window resize
-			this.sliderW		= this.itemW * this.itemsCount;
+			this.sliderW		= this.itemW * this.itemsCount * 2;
 			
 			// the ul parent's (div.es-carousel) width is the "visible" width
 			this.visibleWidth	= this.$esCarousel.width();

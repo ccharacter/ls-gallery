@@ -23,6 +23,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'ls-gallery'
 );
 function laura_scripts() {
+	if (!(is_page(701))) {
 	wp_enqueue_style( 'ls-elastislide', plugin_dir_url(__FILE__). 'css/elastislide.css' );
 	wp_enqueue_style( 'ls-elastistyle',  plugin_dir_url(__FILE__) . 'css/elastistyle.css' );
 	
@@ -30,6 +31,7 @@ function laura_scripts() {
 	wp_enqueue_script( 'ls-jquerytmpl',  plugin_dir_url(__FILE__) .'js/jquery.tmpl.min.js', '', '', true );
 	wp_enqueue_script( 'ls-elastislide',  plugin_dir_url(__FILE__) .'js/jquery.elastislide.js', '', '', true );
 	wp_enqueue_script( 'ls-gallery',  plugin_dir_url(__FILE__).  'js/gallery.js', '', '', true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'laura_scripts' );
 
@@ -112,7 +114,7 @@ function modified_gallery_shortcode($attr) { ?>
     $output .= '<noscript>
     	<style>
     		.es-carousel ul {
-    			display:block;
+    			display:flex;
 			}
 		</style>
 	</noscript>';
@@ -140,19 +142,19 @@ function modified_gallery_shortcode($attr) { ?>
     
     $output .= '<style>
     	.es-nav span {
-			background:transparent url(' . get_stylesheet_directory_uri() .'/images/nav_thumbs.png' . ') no-repeat top left;
+			background:transparent url(' .  plugin_dir_url(__FILE__).'images/nav_thumbs.png' . ') no-repeat top left;
 		}
 		
 		.rg-image-nav a{
-			background:#000 url(' . get_stylesheet_directory_uri() .'/images/nav.png) no-repeat -20% 50%;
+			background:#000 url(' .  plugin_dir_url(__FILE__).'images/nav.png) no-repeat -20% 50%;
 		}
 		
 		.rg-view a{
-			background:#464646 url(' . get_stylesheet_directory_uri() .'/images/views.png) no-repeat top left;
+			background:#464646 url(' .  plugin_dir_url(__FILE__).'images/views.png) no-repeat top left;
 		}
 		
 		.rg-loading{
-			background:#000 url(' . get_stylesheet_directory_uri() .'/images/ajax-loader.gif) no-repeat center center;
+			background:#000 url(' .  plugin_dir_url(__FILE__).'images/ajax-loader.gif) no-repeat center center;
 		}
 	</style>';
 
@@ -185,11 +187,11 @@ function modified_gallery_shortcode($attr) { ?>
 		
 		//if ($slidecount == 1) {
 			$output .= '<li><a href="#"><img src="' . $image_src_url2[0] . '" data-large="' . $image_src_url[0] . '" alt="image' . $slidecount . '" data-description="' . wptexturize($attachment->post_excerpt) . '" data-orientation="';
-			if ($imagewidth > $imageheight) {
-				$output .= 'cover';
-			} else {
+			//if ($imagewidth > $imageheight) {
+				//$output .= 'cover';
+			//} else {
 				$output .= 'contain';
-			}
+			//}
 			$output .= '"/></a></li>';
 			//$output .= '<div class="carousel-item active" data-thumb="' . $slidecount . '"style="height: 500px; background-image: url(' . $image_src_url[0] . '); background-position: center center; background-size: ';
 			//if ($imagewidth > $imageheight) { 
