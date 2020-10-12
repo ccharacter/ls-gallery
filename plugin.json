@@ -1,9 +1,9 @@
 {
 	"name": "LS Gallery Override",
-	"version": "1.81,
-	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v1.81.zip",
+	"version": "1.83,
+	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v1.83.zip",
 
-	"homepage": "https://ccharacter.com/custom-plugins/sws-wp-tweaks/",
+	"homepage": "https://ccharacter.com/custom-plugins/ls-gallery/",
 	"requires": "4.0",
 	"tested": "5.4.1",
 	"last_updated": "2020-10-12",
