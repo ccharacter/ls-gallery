@@ -2,9 +2,9 @@
 
 /**
  * Plugin Name:       LS Gallery Override
- * Plugin URI:        https://ccharacter.com/custom-plugins/sws-wp-tweaks/
+ * Plugin URI:        https://ccharacter.com/custom-plugins/ls-gallery/
  * Description:       Override the default WordPress gallery shortcode with a friendlier version
- * Version:           1.79
+ * Version:           1.8
  * Requires at least: 5.2
  * Requires PHP:      5.5
  * Author:            Laura Sage
@@ -45,8 +45,8 @@ add_action( 'wp_enqueue_scripts', 'laura_scripts' );
 //add_action( 'wp_enqueue_scripts', 'my_scripts' );
 
 // Replace gallery shortcode with carousel
-add_shortcode( 'gallery', 'modified_gallery_shortcode' );
-function modified_gallery_shortcode($attr) { ?>
+add_shortcode( 'gallery', 'ls_modified_gallery_shortcode' );
+function ls_modified_gallery_shortcode($attr) { ?>
 <!--<div class="container mt-5">
 	<div class="carousel-container position-relative row">-->
 	<?php $post = get_post();

@@ -1,12 +1,12 @@
 {
 	"name": "LS Gallery Override",
-	"version": "1.79,
-	"download_url": "https://github.com/ccharacter/sws-wp-tweaks/archive/v1.79.zip",
+	"version": "1.8,
+	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v1.8.zip",
 
 	"homepage": "https://ccharacter.com/custom-plugins/sws-wp-tweaks/",
 	"requires": "4.0",
 	"tested": "5.4.1",
-	"last_updated": "2020-06-04",
+	"last_updated": "2020-10-12",
 	"upgrade_notice": "Keeping up with the lastest version means fewer errors.",
 
 	"author": "Laura Sage",
