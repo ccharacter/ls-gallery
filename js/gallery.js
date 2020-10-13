@@ -1,4 +1,6 @@
 jQuery(function($) {
+	
+	if($("#rg-gallery").length){ // has gallery
 	// ======================= imagesLoaded Plugin ===============================
 	// https://github.com/desandro/imagesloaded
 
@@ -11,6 +13,8 @@ jQuery(function($) {
 
 	// original: mit license. paul irish. 2010.
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
+
+	var pluginUrl = '<?php echo plugins_url(); ?>' ;
 
 	jQuery.fn.imagesLoaded 		= function( callback ) {
 	var $images = this.find('img'),
@@ -66,7 +70,7 @@ jQuery(function($) {
 			init			= function() {
 				
 				// (not necessary) preloading the images here...
-				$items.add('<img src="ajax-loader.gif"/><img src="black.png"/>').imagesLoaded( function() {
+				$items.add('<img src="' + pluginUrl + '/ajax-loader.gif"/><img src="' + pluginUrl + '/black.png"/>').imagesLoaded( function() {
 					// add options
 					_addViewModes();
 					
@@ -271,4 +275,6 @@ jQuery(function($) {
 	var $new  = jQuery('<li><a href="#"><img src="images/thumbs/1.jpg" data-large="images/1.jpg" alt="image01" data-description="From off a hill whose concave womb reworded" /></a></li>');
 	Gallery.addItems( $new );
 	*/
+	
+	} // has galley
 });
