@@ -4,7 +4,7 @@
  * Plugin Name:       LS Gallery Override
  * Plugin URI:        https://ccharacter.com/custom-plugins/ls-gallery/
  * Description:       Override the default WordPress gallery shortcode with a friendlier version
- * Version:           1.9
+ * Version:           2.1
  * Requires at least: 5.2
  * Requires PHP:      5.5
  * Author:            Laura Sage
@@ -180,7 +180,7 @@ function ls_modified_gallery_shortcode($attr) { ?>
 		$image_src_url = wp_get_attachment_image_src($id, 'full');
 		$image_src_url2 = wp_get_attachment_image_src($id, 'thumbnail');
 		
-		error_log(print_r($image_src_url,true),0);
+		//error_log(print_r($image_src_url,true),0);
 		
 		list($imagewidth, $imageheight) = getimagesize($image_src_url[0]);
 		$imagewidth=$image_src_url[1];
