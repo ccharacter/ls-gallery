@@ -14,8 +14,8 @@ jQuery(function($) {
 	// original: mit license. paul irish. 2010.
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
-	var pluginUrl = '<?php echo plugins_url(); ?>' ;
-
+	//var pluginUrl = '<?php echo plugins_url(); ?>' ;
+	var pluginURL = jsVars.templateUrl+"/";
 	jQuery.fn.imagesLoaded 		= function( callback ) {
 	var $images = this.find('img'),
 		len 	= $images.length,
