@@ -214,25 +214,31 @@ jQuery(function($) {
 				$items.removeClass('selected');
 				$item.addClass('selected');
 					 
-				var $thumb		= $item.find('img'),
-					largesrc	= $thumb.data('large'),
-					title		= $thumb.data('description');
-					orientation	= $thumb.data('orientation');
-				
+				var title               = '';
+				var $thumb              = $item.find('img'),
+						largesrc        = $thumb.data('large'),
+						title           = $thumb.data('description');
+						orientation     = $thumb.data('orientation');
+
 				jQuery('<img/>').load( function() {
-					
-					//$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
-					$rgGallery.find('div.rg-image').empty().css({'background-image':'url(' + largesrc + ')','background-size': '' + orientation + ''});
-					
-					if( title )
-						$rgGallery.find('div.rg-caption').show().children('p').empty().text( title );
-					
-					$loader.hide();
-					
-					if( mode === 'carousel' ) {
-						$esCarousel.elastislide( 'reload' );
-						$esCarousel.elastislide( 'setCurrent', current );
-					}
+
+						//$rgGallery.find('div.rg-image').empty().append('<img src="' + largesrc + '"/>');
+						$rgGallery.find('div.rg-image').empty().css({'background-image':'url(' + largesrc + ')','background-size': '' + orientation + ''});
+
+						//console.log(title);
+						//console.log(title.length);
+						if( title.length >0 ) {
+								$rgGallery.find('div.rg-caption').show().children('p').empty().text( title );
+						} else {
+								$rgGallery.find('div.rg-caption').hide();
+						}
+						$loader.hide();
+
+						if( mode === 'carousel' ) {
+								$esCarousel.elastislide( 'reload' );
+								$esCarousel.elastislide( 'setCurrent', current );
+						}
+
 					
 					anim	= false;
 					
