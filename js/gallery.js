@@ -15,7 +15,7 @@ jQuery(function($) {
 	// contributors: Oren Solomianik, David DeSandro, Yiannis Chatzikonstantinou
 
 	//var pluginUrl = '<?php echo plugins_url(); ?>' ;
-	var pluginURL = jsVars.templateUrl+"/";
+	var pluginUrl = jsVars.pluginUrl;
 	jQuery.fn.imagesLoaded 		= function( callback ) {
 	var $images = this.find('img'),
 		len 	= $images.length,

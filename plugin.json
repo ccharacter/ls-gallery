@@ -1,7 +1,7 @@
 {
 	"name": "LS Gallery Override",
-	"version": "2.2",
-	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v2.2.zip",
+	"version": "2.3",
+	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v2.3.zip",
 
 	"homepage": "https://ccharacter.com/custom-plugins/ls-gallery/",
 	"requires": "4.0",
