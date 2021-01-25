@@ -136,7 +136,7 @@ function ls_modified_gallery_shortcode($attr) { ?>
 			<div class="rg-image"></div>
 			<div class="rg-loading"></div>
 			<div class="rg-caption-wrapper">
-				<div class="rg-caption" style="display:none;">
+				<div class="rg-caption">
 					<p></p>
 				</div>
 			</div>
