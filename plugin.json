@@ -1,11 +1,11 @@
 {
 	"name": "LS Gallery Override",
-	"version": "2.4",
-	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v2.4.zip",
+	"version": "2.5",
+	"download_url": "https://github.com/ccharacter/ls-gallery/archive/v2.5.zip",
 
 	"homepage": "https://ccharacter.com/custom-plugins/ls-gallery/",
 	"requires": "4.0",
-	"tested": "5.4.1",
+	"tested": "6.0",
 	"last_updated": "2020-10-12",
 	"upgrade_notice": "Keeping up with the lastest version means fewer errors.",
 
