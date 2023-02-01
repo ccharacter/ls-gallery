@@ -185,9 +185,9 @@ function ls_modified_gallery_shortcode($attr) { ?>
 		$image_src_url = wp_get_attachment_image_src($id, 'full');
 		$image_src_url2 = wp_get_attachment_image_src($id, 'thumbnail');
 		
-		error_log($_SERVER['DOCUMENT_ROOT'].$image_src_url[0],0);
+		$image_path=$_SERVER['DOCUMENT_ROOT'].$image_src_url[0];
 		
-		list($imagewidth, $imageheight) = getimagesize($image_src_url[0]);
+		list($imagewidth, $imageheight) = getimagesize($image_path);
 		$imagewidth=$image_src_url[1];
 		$imageheight=$image_src_url[2];
 		
